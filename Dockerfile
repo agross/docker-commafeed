@@ -3,11 +3,13 @@ LABEL maintainer "Alexander Groß <agross@therightstuff.de>"
 
 EXPOSE 8082
 
+HEALTHCHECK --start-period=30s \
+            CMD wget --server-response --output-document=/dev/null http://localhost:8082 || exit 1
+
 RUN echo Installing packages && \
-    apk add \
-      --no-cache \
-      bash \
-      wget
+    apk add --no-cache \
+            bash \
+            wget
 
 RUN COMMAFEED_VERSION=2.4.0 && \
     \
