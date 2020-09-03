@@ -11,7 +11,7 @@ RUN echo Installing packages && \
             bash \
             wget
 
-RUN COMMAFEED_VERSION=2.4.0 && \
+RUN COMMAFEED_VERSION=2.5.0 && \
     \
     DOWNLOAD_URL=https://github.com/Athou/commafeed/releases/download/$COMMAFEED_VERSION/commafeed.jar && \
     echo Downloading $DOWNLOAD_URL to $(pwd) && \
