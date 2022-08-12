@@ -1,4 +1,4 @@
-FROM openjdk:19-alpine
+FROM eclipse-temurin:18-jre-alpine
 LABEL maintainer "Alexander Groß <agross@therightstuff.de>"
 
 EXPOSE 8082
